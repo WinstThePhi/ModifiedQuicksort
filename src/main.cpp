@@ -17,17 +17,15 @@ int main(){
 		std::cin >> arr[c];
 	}
 	std::ofstream fout;
-	fout.open("input.in");
+	fout.open("output.txt");
 	if(!fout){
 		std::cerr << "Failed to open the file" << std::endl;
 		return -1;
 	}
-	for(int c = 0; c < num; c++){
-		std::cout << "\n";
-		Quicksort sort(arr, num);
-		for(int i : arr){
-			fout << i << std::endl;
-		}
-		return 0;
+	Quicksort sort(arr, num);
+	for(int i : arr){
+		fout << i << std::endl;
 	}
+	
+	return 0;
 }
